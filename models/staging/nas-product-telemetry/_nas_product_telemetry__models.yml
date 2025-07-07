@@ -9,7 +9,7 @@ models:
       transaction patterns, payment methods, and transaction statuses.
     
     columns:
-      - name: transaction
+      - name: transaction_id
         description: Unique identifier for the transaction.
         tests:
           - unique
