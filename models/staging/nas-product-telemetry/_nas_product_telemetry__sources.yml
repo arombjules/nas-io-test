@@ -9,12 +9,27 @@ sources:
 
     tables:
       - name: challenge
+        description: |
+          Unique list of challenges regardless of the access type (paid or free)
+          or status (draft, deleted, published)
       - name: challenge_participants
+        description: List of participants and their status tied to a challenge
       - name: event_attendees
+        description: |
+          List of unique tickets and the ticket status tied to events
+          by community in the platform
       - name: events
+        description: |
+          List of unique events regardless if the event is active or not, with 
+          event status (deleted, draft or published), and access type (paid or free) cohorts
       - name: folder
+        description: |
+          List of folders, also called as digital files front end, regardless if 
+          the folder is a session or digital product
       - name: folder_access
+        description: List of learners accessing the folders for every folders offered in a community
       - name: raw_transactions
+        description: List of unique transactions regardless if the payment is successful or not
 
     config:
       loaded_at_field: _fivetran_synced

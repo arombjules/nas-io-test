@@ -46,7 +46,7 @@ renamed as (
         
         -- metadata
         _fivetran_synced as fivetran_synced_ts,
-        _row
+        _row as fivetran_row
 
     from source
 

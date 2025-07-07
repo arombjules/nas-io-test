@@ -42,21 +42,21 @@ models:
         description: Provider facilitating the payment method.
       - name: status
         description: Current status of the transaction.
-      - name: _row
+      - name: fivetran_row
         description: Internal row identifier for the transaction record.
       - name: _fivetran_synced
         description: Timestamp when the record was last synced by Fivetran.
-      - name: declinecode
+      - name: decline_code
         description: Code indicating the reason for transaction decline, if applicable.
-      - name: paymentbrand
+      - name: payment__brand
         description: Brand associated with the payment method.
-      - name: pricetype
+      - name: price_type
         description: Type of pricing applied to the transaction.
-      - name: chargebackreason
+      - name: chargeback_reason
         description: Reason for any chargeback associated with the transaction.
-      - name: ischargeback
-        description: Indicates whether the transaction is a chargeback.
-      - name: failurecode
+      - name: is_chargeback
+        description: Boolean logic indicating whether the transaction is a chargeback or not.
+      - name: failure_code
         description: Code indicating the reason for transaction failure, if applicable.
-      - name: failurereason
+      - name: failure_reason
         description: Description of the reason for transaction failure, if applicable.
