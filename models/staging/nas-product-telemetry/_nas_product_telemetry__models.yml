@@ -1,0 +1,62 @@
+version: 2
+
+models:
+  - name: stg_product__transactions
+    description: |
+      This model processes and transforms raw transaction data from nas.io product telemetry into a structured format for analysis. 
+      It includes details about the transaction such as product, community, entity, and learner identifiers, transaction and creation 
+      timestamps, transaction types, purchase types, currency, amounts, payment methods, and status. This model is useful for analyzing 
+      transaction patterns, payment methods, and transaction statuses.
+    
+    columns:
+      - name: transaction
+        description: Unique identifier for the transaction.
+        tests:
+          - unique
+          - not_null
+      - name: community_object_id
+        description: Identifier for the community associated with the transaction.
+      - name: entity_object_id
+        description: Identifier for the entity associated with the transaction.
+      - name: learner_object_id
+        description: Identifier for the learner associated with the transaction.
+      - name: refunded_transaction_reference_id
+        description: Reference ID for any refunded transactions.
+      - name: created_ts
+        description: Timestamp when the transaction record was created.
+      - name: transaction_created_ts
+        description: Timestamp when the transaction was created.
+      - name: updated_ts
+        description: Timestamp when the transaction record was last updated.
+      - name: transaction_type
+        description: Type of transaction, such as purchase or refund.
+      - name: purchase_type
+        description: Type of purchase made in the transaction.
+      - name: original_currency
+        description: Currency in which the transaction was originally made.
+      - name: original_amount
+        description: Original amount of the transaction in the specified currency.
+      - name: payment_method
+        description: Method used for payment in the transaction.
+      - name: payment_provider
+        description: Provider facilitating the payment method.
+      - name: status
+        description: Current status of the transaction.
+      - name: _row
+        description: Internal row identifier for the transaction record.
+      - name: _fivetran_synced
+        description: Timestamp when the record was last synced by Fivetran.
+      - name: declinecode
+        description: Code indicating the reason for transaction decline, if applicable.
+      - name: paymentbrand
+        description: Brand associated with the payment method.
+      - name: pricetype
+        description: Type of pricing applied to the transaction.
+      - name: chargebackreason
+        description: Reason for any chargeback associated with the transaction.
+      - name: ischargeback
+        description: Indicates whether the transaction is a chargeback.
+      - name: failurecode
+        description: Code indicating the reason for transaction failure, if applicable.
+      - name: failurereason
+        description: Description of the reason for transaction failure, if applicable.
