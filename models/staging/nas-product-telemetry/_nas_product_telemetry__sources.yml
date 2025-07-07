@@ -2,7 +2,7 @@ version: 2
 
 sources:
   - name: google_sheets
-    database: raw
+    database: nas-io-test
     schema: google_sheets
     description: '{{ doc("src_googlesheets") }}'
     loader: fivetran
