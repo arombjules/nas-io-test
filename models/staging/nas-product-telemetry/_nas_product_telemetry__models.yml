@@ -17,7 +17,9 @@ models:
       - name: community_object_id
         description: Identifier for the community associated with the transaction.
       - name: entity_object_id
-        description: Identifier for the entity associated with the transaction.
+        description: |
+          Identifier for the entity associated with the transaction. This is what we join to other objects in the product telemetry 
+          (ex. entity object id to the respective ids in challenges, events, folders, etc.)
       - name: learner_object_id
         description: Identifier for the learner associated with the transaction.
       - name: refunded_transaction_reference_id
